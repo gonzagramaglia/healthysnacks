@@ -14,6 +14,7 @@ import type { CustomerPurchase } from "@/lib/customers";
 import { CustomerCoupon } from "@/components/CustomerCoupon";
 import { CustomerSearch } from "@/components/CustomerSearch";
 import { BenefitsTeaser } from "@/components/BenefitsTeaser";
+import { assetUrl } from "@/lib/assets";
 
 const sourceSans = Source_Sans_3({
   subsets: ["latin"],
@@ -43,14 +44,14 @@ export function MainContent({
             {/* Logo - un solo contenedor para ambos temas */}
             <div className="relative h-8 w-8">
               <Image
-                src="/moovimiento.png"
+                src={assetUrl("/moovimiento.png")}
                 alt="Moovimiento"
                 fill
                 className="block dark:hidden object-contain"
                 priority
               />
               <Image
-                src="/moovimiento-white.png"
+                src={assetUrl("/moovimiento-white.png")}
                 alt="Moovimiento"
                 fill
                 className="hidden dark:block object-contain"
@@ -122,7 +123,7 @@ export function MainContent({
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-white/30 dark:bg-white/10 rounded-full blur-[140px]" />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-white/40 dark:bg-white/20 rounded-full blur-[100px]" />
               <Image
-                src="/moovimiento-emoji.png"
+                src={assetUrl("/moovimiento-emoji.png")}
                 alt="Moovimiento - Hero"
                 width={720}
                 height={480}

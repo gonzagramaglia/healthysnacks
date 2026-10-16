@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { MockApiProvider } from "@/components/mock-api-provider";
+import { assetUrl } from "@/lib/assets";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,6 +56,7 @@ export default function RootLayout({
     <html lang="es" className="dark" suppressHydrationWarning>
       <body
         suppressHydrationWarning
+        style={{ "--wallpaper-url": `url("${assetUrl("/wallpaper.png")}")` } as React.CSSProperties}
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-zinc-50 dark:bg-background text-foreground`}
       >
         <ThemeProvider>

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { dictionary, Language } from "@/lib/dictionary";
+import { assetUrl } from "@/lib/assets";
 
 const TOTAL_GRAMS = 220;
 const MAX_PER_INGREDIENT = 66;
@@ -1664,13 +1665,13 @@ export function MixBuilder({ lang = "es" }: { lang?: Language }) {
                 {/* Properly adjusted Diffused Glow behind the trust logo */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-48 md:h-48 bg-white/50 dark:bg-white/10 rounded-full blur-[45px] md:blur-[60px]" />
                 <Image
-                  src="/moovimiento.png"
+                  src={assetUrl("/moovimiento.png")}
                   alt="Moovimiento"
                   fill
                   className="relative object-contain block dark:hidden"
                 />
                 <Image
-                  src="/moovimiento-white.png"
+                  src={assetUrl("/moovimiento-white.png")}
                   alt="Moovimiento"
                   fill
                   className="relative object-contain hidden dark:block"

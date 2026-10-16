@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { assetUrl } from "@/lib/assets";
 
 export default function AdminLayout({
   children,
@@ -12,7 +13,7 @@ export default function AdminLayout({
       {/* Background Wallpaper - Lower Opacity as requested */}
       <div
         className="fixed inset-0 z-[-1] opacity-10 dark:opacity-5 pointer-events-none bg-cover bg-center bg-no-repeat grayscale-[20%] brightness-110"
-        style={{ backgroundImage: 'url("/wallpaper.png")' }}
+        style={{ backgroundImage: `url("${assetUrl("/wallpaper.png")}")` }}
       />
 
       {/* Content wrapper */}

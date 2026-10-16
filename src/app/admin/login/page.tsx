@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { assetUrl } from "@/lib/assets";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -65,7 +66,7 @@ export default function AdminLoginPage() {
             className="relative h-24 w-24 hover:scale-105 transition-transform"
           >
             <Image
-              src="/moovimiento-white.png"
+              src={assetUrl("/moovimiento-white.png")}
               alt="Moovimiento"
               fill
               className="object-contain"

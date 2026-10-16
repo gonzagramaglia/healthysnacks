@@ -2,6 +2,7 @@
 
 import { dictionary, Language } from "@/lib/dictionary";
 import Image from "next/image";
+import { assetUrl } from "@/lib/assets";
 
 interface TrustProps {
     lang: Language;
@@ -21,13 +22,13 @@ export function Trust({ lang }: TrustProps) {
                         {/* Diffused Glow behind the trust logo */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-40 md:h-40 bg-white/50 dark:bg-white/10 rounded-full blur-[40px] md:blur-[60px]" />
                         <Image
-                            src="/moovimiento.png"
+                            src={assetUrl("/moovimiento.png")}
                             alt="Moovimiento"
                             fill
                             className="relative object-contain block dark:hidden"
                         />
                         <Image
-                            src="/moovimiento-white.png"
+                            src={assetUrl("/moovimiento-white.png")}
                             alt="Moovimiento"
                             fill
                             className="relative object-contain hidden dark:block"
