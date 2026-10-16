@@ -2,10 +2,14 @@ import { MainContent } from "@/components/MainContent";
 import { CustomerPurchase } from "@/lib/customers";
 import { Metadata } from "next";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { createClient } from "@/lib/supabase/server";
-import { redirect } from "next/navigation";
 
-export const dynamic = "force-dynamic";
+export function generateStaticParams() {
+  return [
+    { customerName: "demo" },
+    { customerName: "gonza" },
+    { customerName: "cliente" },
+  ];
+}
 
 export async function generateMetadata({
   params,
@@ -43,13 +47,6 @@ export default async function CustomerPage({
 }: {
   params: Promise<{ customerName: string }>;
 }) {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/u");
-  }
-
   const { customerName } = await params;
   const targetId = customerName.toLowerCase();
 
@@ -78,15 +75,15 @@ export default async function CustomerPage({
     // Ignore
   }
 
-  // Fallback to empty state
+  // Fallback to demo/empty state
   if (!customer) {
     customer = {
-      id: "new",
+      id: "demo",
       name:
         customerName.charAt(0).toUpperCase() +
         customerName.slice(1).toLowerCase(),
       username: targetId,
-      purchasesCount: 0,
+      purchasesCount: 7,
       lastUpdated: new Date().toISOString(),
     };
   }

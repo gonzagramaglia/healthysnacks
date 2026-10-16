@@ -9,24 +9,24 @@
 ## ✨ Key Features
 
 - **🥣 Mix Builder**: Intuitive interface (simple selection) to build your perfect mix.
-- **🔐 Google Authentication**: Simplified one-click login for regular customers.
+- **🔐 Google Authentication**: Simplified one-click login for regular customers (disabled due to maintenance costs).
 - **🛒 Integrated Checkout**: Optimized purchase process with real-time price calculation.
 - **💳 Secure Payments**: Full integration with Mercado Pago for reliable transactions.
 - **🎁 Loyalty Program**: Automated progress tracking for frequent customers with rewards.
-- **🚚 Delivery Management**: Configurable delivery options, focused on [Ciudad Universitaria](https://www.google.com/maps/place/Pabell%C3%B3n+Argentina+%7C+U.N.C./@-31.4377036,-64.1924841,16z/data=!4m15!1m8!3m7!1s0x9432a2f390acbf49:0x76ac4d048e43a498!2sCdad.+Universitaria,+X5000+C%C3%B3rdoba!3b1!8m2!3d-31.4391398!4d-64.1861887!16s%2Fg%2F11rf7v8hwm!3m5!1s0x9432a2f3f4c88b1f:0x52fd4a14aa234bf!8m2!3d-31.4385451!4d-64.1888835!16s%2Fg%2F1q5bm3s9g).
+- **🚚 Delivery Management**: Configurable delivery options, focused on [**Ciudad Universitaria**](https://www.google.com/maps/place/Pabell%C3%B3n+Argentina+%7C+U.N.C./@-31.4377036,-64.1924841,16z/data=!4m15!1m8!3m7!1s0x9432a2f390acbf49:0x76ac4d048e43a498!2sCdad.+Universitaria,+X5000+C%C3%B3rdoba!3b1!8m2!3d-31.4391398!4d-64.1861887!16s%2Fg%2F11rf7v8hwm!3m5!1s0x9432a2f3f4c88b1f:0x52fd4a14aa234bf!8m2!3d-31.4385451!4d-64.1888835!16s%2Fg%2F1q5bm3s9g).
 
 ---
 
 ## 🛠️ Technology Stack
 
-- **Framework**: [Next.js 16](https://nextjs.org/) + [React 19](https://react.dev/)
-- **Auth**: [Supabase Auth](https://supabase.com/auth) with Google Provider
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) + [Radix UI](https://www.radix-ui.com/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Database**: [Supabase](https://supabase.com/)
-- **Global State**: [Zustand](https://github.com/pmndrs/zustand)
-- **Payments**: [Mercado Pago](https://www.mercadopago.com.ar/developers/es/docs/sdks-library/server-side)
-- **Email**: [Resend](https://resend.com/)
+- **Framework**: [**Next.js 16**](https://nextjs.org/) + [**React 19**](https://react.dev/)
+- **Auth**: [**Supabase Auth**](https://supabase.com/auth) with Google Provider
+- **Styling**: [**Tailwind CSS 4**](https://tailwindcss.com/) + [**Radix UI**](https://www.radix-ui.com/)
+- **Language**: [**TypeScript**](https://www.typescriptlang.org/)
+- **Database**: [**Supabase**](https://supabase.com/)
+- **Global State**: [**Zustand**](https://github.com/pmndrs/zustand)
+- **Payments**: [**Mercado Pago**](https://www.mercadopago.com.ar/developers/es/docs/sdks-library/server-side)
+- **Email**: [**Resend**](https://resend.com/)
 
 ---
 
@@ -34,9 +34,9 @@
 
 ### 🗄️ Supabase
 If you created a brand new Supabase project:
-1. Copy [env.example](env.example) to `.env.local`.
+1. Copy [**env.example**](env.example) to `.env.local`.
 2. Fill `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and `SUPABASE_SERVICE_ROLE_KEY`.
-3. Run the SQL in [supabase/schema.sql](supabase/schema.sql) in Supabase SQL Editor.
+3. Run the SQL in [**supabase/schema.sql**](supabase/schema.sql) in Supabase SQL Editor.
 
 ### 🔐 Google Auth (OAuth)
 1. Go to **Google Cloud Console** and create an OAuth 2.0 Client ID.
@@ -81,4 +81,4 @@ This project is for commercial use by Moovimiento. All rights reserved.
 
 ---
 
-Made with 💛 by [Gonza](https://github.com/gonzagramaglia)
+Made with 💛 by [**Gonza**](https://gonzagramaglia.github.io/)

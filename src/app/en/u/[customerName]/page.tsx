@@ -3,7 +3,13 @@ import { CustomerPurchase } from "@/lib/customers";
 import { Metadata } from "next";
 import { createAdminClient } from "@/lib/supabase/admin";
 
-export const dynamic = "force-dynamic";
+export function generateStaticParams() {
+  return [
+    { customerName: "demo" },
+    { customerName: "gonza" },
+    { customerName: "cliente" },
+  ];
+}
 
 export async function generateMetadata({
   params,
@@ -69,15 +75,15 @@ export default async function CustomerPageEn({
     // Ignore
   }
 
-  // Fallback to empty state
+  // Fallback to demo/empty state
   if (!customer) {
     customer = {
-      id: "new",
+      id: "demo",
       name:
         customerName.charAt(0).toUpperCase() +
         customerName.slice(1).toLowerCase(),
       username: targetId,
-      purchasesCount: 0,
+      purchasesCount: 7,
       lastUpdated: new Date().toISOString(),
     };
   }

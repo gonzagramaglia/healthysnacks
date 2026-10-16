@@ -1,5 +1,13 @@
 import { redirect } from "next/navigation";
 
+export function generateStaticParams() {
+  return [
+    { customerName: "demo" },
+    { customerName: "gonza" },
+    { customerName: "cliente" },
+  ];
+}
+
 export default async function LegacyCustomerPage({
   params,
 }: {

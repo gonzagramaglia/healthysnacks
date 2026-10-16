@@ -117,26 +117,20 @@ export function MainContent({
             </div>
           </div>
           <div className="flex justify-center order-first md:order-none -mb-20 -mt-8 md:my-0">
-            <a
-              href="https://instagram.com/moovimiento"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Ir a Instagram de Moovimiento"
-              className="group relative inline-block"
-            >
-              {/* Even Larger and More Diffused White Glow */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-white/30 dark:bg-white/10 rounded-full blur-[140px] group-hover:bg-white/50 transition-colors duration-500" />
+            <div className="relative inline-block">
+              {/* White Glow without hover effects */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-white/30 dark:bg-white/10 rounded-full blur-[140px]" />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-white/40 dark:bg-white/20 rounded-full blur-[100px]" />
               <Image
                 src="/moovimiento-emoji.png"
                 alt="Moovimiento - Hero"
                 width={720}
                 height={480}
-                className="relative w-auto h-auto object-cover cursor-pointer transition-transform duration-300 ease-out group-hover:scale-105"
+                className="relative w-auto h-auto object-cover"
                 style={{ clipPath: "inset(0 0 10% 0)" }}
                 priority
               />
-            </a>
+            </div>
           </div>
         </section>
         {benefitsMode === "teaser" ? <BenefitsTeaser lang={lang} /> : null}
